@@ -1,749 +1,1065 @@
-phone
+index:  0
 L: access phone
-product
+R: growth phone
+index:  1
 L: the product
-product
+R: as product
+index:  2
 L: struggling product
-phone
+R: was product
+index:  3
 L: new phone
-product
+R: to phone
+index:  4
 L: computer product
-product
+R: and product
+index:  5
 L: previous product
-product
+index:  6
 L: three product
-product
+R: at product
+index:  7
 L: skin-care product
-product
+R: is product
+index:  8
 L: atlas product
-phone
+R: and product
+index:  9
 L: the phone
-product
+R: to phone
+index:  10
 L: furniture product
-phone
+R: could product
+index:  11
 L: gab phone
-phone
+R: have phone
+index:  12
 L: tip phone
-phone
+R: that phone
+index:  13
 L: access phone
-phone
+index:  14
 L: the phone
-phone
+R: busy phone
+index:  15
 L: telephone phone
-product
+R: increased phone
+index:  16
 L: microprocessor product
-phone
+index:  17
 L: telephone phone
-product
+R: that phone
+index:  18
 L: non-food product
-product
+index:  19
 L: rail-intermodal product
-phone
+R: which product
+index:  20
 L: dedicated phone
-product
+index:  21
 L: car product
-product
+R: " product
+index:  22
 L: complete product
-phone
+R: of product
+index:  23
 L: the phone
-phone
+R: making phone
+index:  24
 L: telephone phone
-product
+R: and phone
+index:  25
 L: luxury-car product
-phone
+R: may product
+index:  26
 L: the phone
-phone
+R: was phone
+index:  27
 L: outside phone
-product
+R: and phone
+index:  28
 L: smith product
-phone
+R: in product
+index:  29
 L: access phone
-phone
+R: making phone
+index:  30
 L: the phone
-phone
+R: but phone
+index:  31
 L: telephone- phone
-product
+R: increase phone
+index:  32
 L: food product
-phone
+index:  33
 L: the phone
-product
+index:  34
 L: their product
-phone
+R: " product
+index:  35
 L: telephone phone
-phone
+R: used phone
+index:  36
 L: 24 phone
-product
-L: corp.'s product
-product
+R: and phone
+index:  37
+L: 's product
+R: of product
+index:  38
 L: similar product
-product
+R: and product
+index:  39
 L: r1 product
-product
+R: made product
+index:  40
 L: a product
-phone
+R: of product
+index:  41
 L: the phone
-phone
+R: was phone
+index:  42
 L: bisexual phone
-phone
+R: recently phone
+index:  43
 L: telephone phone
-phone
+R: of phone
+index:  44
 L: complaint phone
-product
+R: and phone
+index:  45
 L: truck product
-product
+R: through product
+index:  46
 L: ibm product
-product
+R: he product
+index:  47
 L: integrated product
-product
+R: of product
+index:  48
 L: new product
-product
+R: of product
+index:  49
 L: popular product
-phone
+R: of product
+index:  50
 L: telephone phone
-product
+index:  51
 L: diagnostics product
-phone
+R: showed product
+index:  52
 L: toll-free phone
-product
+R: for phone
+index:  53
 L: several product
-phone
+R: such product
+index:  54
 L: trading phone
-product
+R: yesterday phone
+index:  55
 L: company's product
-phone
+index:  56
 L: the phone
-product
+R: first phone
+index:  57
 L: car product
-phone
+R: at product
+index:  58
 L: the phone
-phone
+index:  59
 L: whose phone
-product
+R: was phone
+index:  60
 L: a product
-product
+R: of product
+index:  61
 L: car product
-phone
+R: by product
+index:  62
 L: telephone phone
-phone
+R: into phone
+index:  63
 L: radio phone
-product
+R: and phone
+index:  64
 L: food product
-product
+R: to product
+index:  65
 L: the product
-phone
+R: into product
+index:  66
 L: the phone
-phone
+R: was phone
+index:  67
 L: telephone phone
-product
+R: the phone
+index:  68
 L: such product
-phone
+R: will product
+index:  69
 L: unsecured phone
-phone
+R: while phone
+index:  70
 L: private phone
-product
+R: and phone
+index:  71
 L: older product
-product
+index:  72
 L: carleton product
-phone
+R: of product
+index:  73
 L: the phone
-phone
+R: let's phone
+index:  74
 L: the phone
-phone
+R: light phone
+index:  75
 L: the phone
-product
+R: to phone
+index:  76
 L: other product
-phone
+index:  77
 L: subscriber phone
-phone
+R: charges phone
+index:  78
 L: access phone
-product
+R: the phone
+index:  79
 L: fragrance product
-product
+R: from product
+index:  80
 L: pc product
-phone
+R: wouldn't product
+index:  81
 L: telephone phone
-phone
+R: and phone
+index:  82
 L: the phone
-phone
+R: was phone
+index:  83
 L: telephone phone
-phone
+R: over phone
+index:  84
 L: access phone
-product
+R: were phone
+index:  85
 L: a product
-phone
+R: of product
+index:  86
 L: dead phone
-product
+R: but phone
+index:  87
 L: aerospace product
-product
+index:  88
 L: in product
-product
+R: ranging product
+index:  89
 L: gm-10 product
-product
+R: is product
+index:  90
 L: apparel product
-product
+index:  91
 L: those product
-product
+R: were product
+index:  92
 L: billion product
-phone
+R: of product
+index:  93
 L: the phone
-product
+index:  94
 L: a product
-product
+R: of product
+index:  95
 L: cereal product
-product
+R: with product
+index:  96
 L: new product
-phone
+R: of product
+index:  97
 L: the phone
-product
+R: " phone
+index:  98
 L: company's product
-product
+R: of product
+index:  99
 L: a product
-phone
+R: of product
+index:  100
 L: "gab" phone
-product
+R: that phone
+index:  101
 L: a product
-product
+R: of product
+index:  102
 L: perfume product
-phone
-L: earthquake. phone
-phone
+R: "elizabeth product
+index:  103
+L: earthquake phone
+R: will phone
+index:  104
 L: telephone phone
-product
+R: called phone
+index:  105
 L: jeep product
-product
+R: which product
+index:  106
 L: 1988-model product
-product
+R: this product
+index:  107
 L: a product
-phone
+R: of product
+index:  108
 L: telephone phone
-product
+R: and phone
+index:  109
 L: car product
-product
+index:  110
 L: torpedo product
-product
+index:  111
 L: lastest product
-product
+R: of product
+index:  112
 L: marketing product
-phone
+R: and product
+index:  113
 L: telephone phone
-product
+R: grew phone
+index:  114
 L: broader product
-product
+R: but product
+index:  115
 L: latest product
-phone
+index:  116
 L: other phone
-phone
+R: " phone
+index:  117
 L: customer phone
-phone
+R: grew phone
+index:  118
 L: access phone
-product
+index:  119
 L: diaper product
-product
+R: in product
+index:  120
 L: "older product
-product
+R: products" product
+index:  121
 L: product product
-product
+R: particularly product
+index:  122
 L: these product
-product
+R: and product
+index:  123
 L: prix product
-product
+R: is product
+index:  124
 L: ps/2 product
-product
+R: of product
+index:  125
 L: his product
-product
+R: of product
+index:  126
 L: full product
-phone
+R: under product
+index:  127
 L: the phone
-product
+R: just phone
+index:  128
 L: ps/2 product
-phone
+R: are product
+index:  129
 L: telephone phone
-phone
+R: at phone
+index:  130
 L: your phone
-phone
+R: and phone
+index:  131
 L: trading phone
-product
+R: to phone
+index:  132
 L: cougar product
-phone
+index:  133
 L: the phone
-phone
+R: no phone
+index:  134
 L: subscriber phone
-product
+R: charges phone
+index:  135
 L: ps/2 product
-product
+R: that product
+index:  136
 L: cracker product
-product
+R: and product
+index:  137
 L: the product
-phone
+index:  138
 L: whose phone
-phone
+R: were phone
+index:  139
 L: gab phone
-phone
+R: once phone
+index:  140
 L: outside phone
-phone
+R: dialed phone
+index:  141
 L: access phone
-phone
+R: in phone
+index:  142
 L: gab- phone
-product
+R: proprietors phone
+index:  143
 L: dreamboat product
-phone
+index:  144
 L: the phone
-phone
+R: went phone
+index:  145
 L: the phone
-phone
+R: and phone
+index:  146
 L: the phone
-phone
+index:  147
 L: a phone
-product
+R: open phone
+index:  148
 L: kids product
-product
+R: could product
+index:  149
 L: equipment product
-product
+R: are product
+index:  150
 L: tire product
-product
+index:  151
 L: new product
-phone
+R: of product
+index:  152
 L: this phone
-phone
+R: open phone
+index:  153
 L: the phone
-phone
+R: from phone
+index:  154
 L: telephone phone
-product
-L: $1.69 product
-phone
+R: in phone
+index:  155
+L: 69 product
+R: of product
+index:  156
 L: open phone
-product
+R: to phone
+index:  157
 L: product product
-product
+R: but product
+index:  158
 L: menswear product
-product
+index:  159
 L: products product
-product
+R: had product
+index:  160
 L: new product
-product
+R: of product
+index:  161
 L: jewelry product
-phone
+R: from product
+index:  162
 L: the phone
-product
+index:  163
 L: shoe product
-product
+R: to product
+index:  164
 L: ibm product
-phone
+index:  165
 L: the phone
-phone
+R: between phone
+index:  166
 L: telephone phone
-phone
+R: or phone
+index:  167
 L: million phone
-product
+R: in phone
+index:  168
 L: camera product
-phone
+R: which product
+index:  169
 L: that phone
-phone
+R: if phone
+index:  170
 L: telephone phone
-product
+R: -- phone
+index:  171
 L: women's product
-phone
+R: where product
+index:  172
 L: access phone
-phone
+R: increased phone
+index:  173
 L: telephone phone
-phone
+R: to phone
+index:  174
 L: telephone phone
-product
+index:  175
 L: computer product
-product
+R: built product
+index:  176
 L: full product
-phone
+R: of product
+index:  177
 L: access phone
-phone
+index:  178
 L: romance phone
-phone
-L: 570,000 phone
-phone
+index:  179
+L: 000 phone
+R: mainly phone
+index:  180
 L: the phone
-product
+R: " phone
+index:  181
 L: a product
-phone
+R: of product
+index:  182
 L: trading phone
-product
+R: to phone
+index:  183
 L: sun's product
-product
+R: and product
+index:  184
 L: new product
-phone
+R: of product
+index:  185
 L: the phone
-phone
+R: were phone
+index:  186
 L: telephone phone
-phone
+R: growth phone
+index:  187
 L: all phone
-phone
+R: were phone
+index:  188
 L: party phone
-product
+index:  189
 L: software product
-phone
+R: pacing product
+index:  190
 L: private phone
-product
+R: the phone
+index:  191
 L: macintosh product
-product
+R: rose product
+index:  192
 L: car product
-phone
+index:  193
 L: the phone
-phone
+R: with phone
+index:  194
 L: crossed phone
-product
+index:  195
 L: amiga product
-product
+R: of product
+index:  196
 L: spectrum product
-phone
+R: has product
+index:  197
 L: direct phone
-product
+R: to phone
+index:  198
 L: gm's product
-phone
+R: of product
+index:  199
 L: using phone
-phone
+R: they phone
+index:  200
 L: access phone
-product
+R: grew phone
+index:  201
 L: computer product
-product
+R: is product
+index:  202
 L: computer product
-phone
+R: moved product
+index:  203
 L: customer phone
-phone
+R: a phone
+index:  204
 L: the phone
-product
+R: in phone
+index:  205
 L: similar product
-phone
+R: called product
+index:  206
 L: telephone phone
-phone
+R: because phone
+index:  207
 L: party- phone
-product
+R: effect phone
+index:  208
 L: old product
-product
+R: of product
+index:  209
 L: the product
-phone
+R: he product
+index:  210
 L: access phone
-phone
+R: were phone
+index:  211
 L: telephone phone
-phone
+R: -- phone
+index:  212
 L: telephone phone
-phone
+index:  213
 L: important phone
-product
+index:  214
 L: ziari product
-phone
+R: of product
+index:  215
 L: and phone
-phone
-L: 50,000 phone
-phone
+R: adapters phone
+index:  216
+L: 000 phone
+index:  217
 L: the phone
-phone
+index:  218
 L: gab phone
-product
+R: last phone
+index:  219
 L: a product
-phone
+R: of product
+index:  220
 L: the phone
-product
+R: says phone
+index:  221
 L: a product
-phone
+R: of product
+index:  222
 L: information phone
-product
+R: which phone
+index:  223
 L: marketing product
-product
+R: said product
+index:  224
 L: specialized product
-product
+R: of product
+index:  225
 L: its product
-product
+R: by product
+index:  226
 L: lexus product
-product
+R: in product
+index:  227
 L: car product
-phone
+R: through product
+index:  228
 L: telephone phone
-phone
+R: and phone
+index:  229
 L: telephone phone
-product
+R: is phone
+index:  230
 L: new product
-product
+R: of product
+index:  231
 L: its product
-phone
+R: 2 product
+index:  232
 L: direct phone
-product
+R: to phone
+index:  233
 L: current product
-product
+R: of product
+index:  234
 L: drink product
-phone
+index:  235
 L: access phone
-product
+R: in phone
+index:  236
 L: ibm product
-product
+index:  237
 L: at product
-product
+R: that product
+index:  238
 L: office-equipment product
-product
+index:  239
 L: old product
-product
+R: -- product
+index:  240
 L: corsica product
-product
+index:  241
 L: credit product
-product
+R: to product
+index:  242
 L: current product
-product
+R: of product
+index:  243
 L: building-materials product
-phone
+R: the product
+index:  244
 L: the phone
-phone
+R: and phone
+index:  245
 L: telephone phone
-phone
+index:  246
 L: the phone
-phone
+index:  247
 L: with phone
-phone
+R: they phone
+index:  248
 L: the phone
-phone
+R: went phone
+index:  249
 L: telephone- phone
-product
+R: growth phone
+index:  250
 L: specialty-food product
-phone
+index:  251
 L: direct phone
-product
+R: to phone
+index:  252
 L: ps/2 product
-phone
+R: of product
+index:  253
 L: the phone
-product
+R: so phone
+index:  254
 L: the product
-product
+R: in product
+index:  255
 L: skin-care product
-product
+R: last product
+index:  256
 L: transformers product
-product
+R: tonka product
+index:  257
 L: new product
-phone
+R: of product
+index:  258
 L: exchange phone
-phone
+index:  259
 L: his phone
-product
+R: be phone
+index:  260
 L: clarion product
-product
+R: have product
+index:  261
 L: machinery product
-phone
+R: fell product
+index:  262
 L: the phone
-phone
+R: sir phone
+index:  263
 L: the phone
-product
+R: like phone
+index:  264
 L: its product
-product
+index:  265
 L: some product
-product
+R: " product
+index:  266
 L: the product
-phone
+R: it product
+index:  267
 L: telephone phone
-phone
+R: that phone
+index:  268
 L: telephone phone
-product
+R: according phone
+index:  269
 L: denton product
-product
+R: of product
+index:  270
 L: a product
-phone
+R: into product
+index:  271
 L: hospital phone
-product
+R: was phone
+index:  272
 L: military product
-product
+R: of product
+index:  273
 L: his product
-product
+R: to product
+index:  274
 L: george product
-product
+R: is product
+index:  275
 L: a product
-product
+R: of product
+index:  276
 L: new product
-phone
+R: of product
+index:  277
 L: telephone phone
-product
+R: during phone
+index:  278
 L: long-awaited product
-product
+R: of product
+index:  279
 L: chemicals product
-product
+R: from product
+index:  280
 L: nail-polish product
-phone
+index:  281
 L: the phone
-phone
+R: was phone
+index:  282
 L: access phone
-phone
+R: in phone
+index:  283
 L: the phone
-product
+R: was phone
+index:  284
 L: microprocessor product
-product
+index:  285
 L: exclusive product
-phone
-L: 442,000 phone
-product
+R: of product
+index:  286
+L: 000 phone
+R: in phone
+index:  287
 L: car product
-product
+R: making product
+index:  288
 L: a product
-phone
+R: of product
+index:  289
 L: clogged phone
-phone
+R: recently phone
+index:  290
 L: the phone
-product
+R: was phone
+index:  291
 L: computer product
-product
+index:  292
 L: lanterns product
-product
+R: of product
+index:  293
 L: acquired product
-product
+R: to product
+index:  294
 L: the product
-product
+R: planned product
+index:  295
 L: pw4000 product
-product
+R: have product
+index:  296
 L: ps/2 product
-phone
+R: last product
+index:  297
 L: information phone
-product
+R: appealing phone
+index:  298
 L: some product
-phone
+R: and product
+index:  299
 L: the phone
-phone
+R: went phone
+index:  300
 L: private- phone
-phone
+R: and phone
+index:  301
 L: the phone
-product
+R: is phone
+index:  302
 L: consumer-products product
-phone
+R: there product
+index:  303
 L: the phone
-phone
+R: for phone
+index:  304
 L: the phone
-product
+index:  305
 L: computer product
-product
+R: won't product
+index:  306
 L: a product
-product
+R: of product
+index:  307
 L: sewing product
-phone
-L: 3,600 phone
-product
+R: they product
+index:  308
+L: 600 phone
+R: at phone
+index:  309
 L: health-club product
-phone
+R: bally product
+index:  310
 L: extending phone
-phone
+R: to phone
+index:  311
 L: business phone
-phone
+R: increased phone
+index:  312
 L: the phone
-phone
+index:  313
 L: asynchronous phone
-product
+index:  314
 L: coleco's product
-product
+R: and product
+index:  315
 L: bit product
-phone
+R: is product
+index:  316
 L: the phone
-product
+index:  317
 L: zytel product
-phone
+R: of product
+index:  318
 L: another phone
-phone
+index:  319
 L: telephone phone
-phone
+R: -- phone
+index:  320
 L: x-rated phone
-product
+index:  321
 L: advertised product
-product
+index:  322
 L: a product
-phone
+R: of product
+index:  323
 L: the phone
-phone
+R: was phone
+index:  324
 L: one-on-one phone
-product
+R: like phone
+index:  325
 L: filter product
-phone
-L: 1,800 phone
-product
+R: for product
+index:  326
+L: 800 phone
+R: in phone
+index:  327
 L: a product
-phone
+R: for product
+index:  328
 L: direct phone
-phone
+R: to phone
+index:  329
 L: the phone
-phone
+index:  330
 L: access phone
-phone
+R: while phone
+index:  331
 L: telephone phone
-product
+R: and phone
+index:  332
 L: car product
-product
+R: and product
+index:  333
 L: vax product
-product
+R: has product
+index:  334
 L: a product
-product
+R: of product
+index:  335
 L: vax product
-product
+R: cray's product
+index:  336
 L: ps/2 product
-phone
+R: as product
+index:  337
 L: emergency phone
-product
+R: played phone
+index:  338
 L: priced product
-product
+R: of product
+index:  339
 L: product product
-product
+R: included product
+index:  340
 L: huge product
-phone
-L: 570,000 phone
-phone
+R: of product
+index:  341
+L: 000 phone
+R: mainly phone
+index:  342
 L: the phone
-product
+R: was phone
+index:  343
 L: marx product
-product
+R: to product
+index:  344
 L: the product
-phone
+R: because product
+index:  345
 L: the phone
-product
+R: that phone
+index:  346
 L: product product
-product
+R: will product
+index:  347
 L: products product
-phone
+R: so product
+index:  348
 L: subscriber- phone
-product
+R: charge phone
+index:  349
 L: a product
-product
+R: of product
+index:  350
 L: optometric product
-product
+R: were product
+index:  351
 L: ground-coffee product
-phone
+R: through product
+index:  352
 L: the phone
-product
+R: at phone
+index:  353
 L: a product
-product
+R: of product
+index:  354
 L: new product
-phone
+R: of product
+index:  355
 L: sex phone
-phone
+R: and phone
+index:  356
 L: the phone
-phone
+R: was phone
+index:  357
 L: the phone
-product
+R: a phone
+index:  358
 L: {product} product
-product
+R: " product
+index:  359
 L: fox product
-product
+index:  360
 L: a product
-phone
+R: of product
+index:  361
 L: chat phone
-phone
+R: -- phone
+index:  362
 L: ordinary phone
-phone
+R: the phone
+index:  363
 L: telephone phone
-phone
+R: jumped phone
+index:  364
 L: access phone
-phone
+R: a phone
+index:  365
 L: communications phone
-product
+R: to phone
+index:  366
 L: 3x product
-product
+R: with product
+index:  367
 L: a product
-phone
+R: of product
+index:  368
 L: tip phone
-product
+R: are phone
+index:  369
 L: future product
-phone
+R: hormel product
+index:  370
 L: " phone
-product
+R: noise phone
+index:  371
 L: car product
-product
+R: anymore product
+index:  372
 L: lancome product
-phone
+R: are product
+index:  373
 L: party phone
-{'L: access': {'product': 0, 'phone': 15}, 'L: the': {'product': 8, 'phone': 52}, 'L: struggling': {'product': 1, 'phone': 0}, 'L: new': {'product': 9, 'phone': 1}, 'L: computer': {'product': 6, 'phone': 0}, 'L: previous': {'product': 1, 'phone': 0}, 'L: three': {'product': 1, 'phone': 0}, 'L: skin-care': {'product': 2, 'phone': 0}, 'L: atlas': {'product': 1, 'phone': 0}, 'L: furniture': {'product': 1, 'phone': 0}, 'L: gab': {'product': 0, 'phone': 3}, 'L: tip': {'product': 0, 'phone': 2}, 'L: telephone': {'product': 0, 'phone': 32}, 'L: microprocessor': {'product': 2, 'phone': 0}, 'L: non-food': {'product': 1, 'phone': 0}, 'L: rail-intermodal': {'product': 1, 'phone': 0}, 'L: dedicated': {'product': 0, 'phone': 1}, 'L: car': {'product': 9, 'phone': 0}, 'L: complete': {'product': 1, 'phone': 0}, 'L: luxury-car': {'product': 1, 'phone': 0}, 'L: outside': {'product': 0, 'phone': 2}, 'L: smith': {'product': 1, 'phone': 0}, 'L: telephone-': {'product': 0, 'phone': 2}, 'L: food': {'product': 2, 'phone': 0}, 'L: their': {'product': 1, 'phone': 0}, 'L: 24': {'product': 0, 'phone': 1}, "L: corp.'s": {'product': 1, 'phone': 0}, 'L: similar': {'product': 2, 'phone': 0}, 'L: r1': {'product': 1, 'phone': 0}, 'L: a': {'product': 21, 'phone': 1}, 'L: bisexual': {'product': 0, 'phone': 1}, 'L: complaint': {'product': 0, 'phone': 1}, 'L: truck': {'product': 1, 'phone': 0}, 'L: ibm': {'product': 3, 'phone': 0}, 'L: integrated': {'product': 1, 'phone': 0}, 'L: popular': {'product': 1, 'phone': 0}, 'L: diagnostics': {'product': 1, 'phone': 0}, 'L: toll-free': {'product': 0, 'phone': 1}, 'L: several': {'product': 1, 'phone': 0}, 'L: trading': {'product': 0, 'phone': 3}, "L: company's": {'product': 2, 'phone': 0}, 'L: whose': {'product': 0, 'phone': 2}, 'L: radio': {'product': 0, 'phone': 1}, 'L: such': {'product': 1, 'phone': 0}, 'L: unsecured': {'product': 0, 'phone': 1}, 'L: private': {'product': 0, 'phone': 2}, 'L: older': {'product': 1, 'phone': 0}, 'L: carleton': {'product': 1, 'phone': 0}, 'L: other': {'product': 1, 'phone': 1}, 'L: subscriber': {'product': 0, 'phone': 2}, 'L: fragrance': {'product': 1, 'phone': 0}, 'L: pc': {'product': 1, 'phone': 0}, 'L: dead': {'product': 0, 'phone': 1}, 'L: aerospace': {'product': 1, 'phone': 0}, 'L: in': {'product': 1, 'phone': 0}, 'L: gm-10': {'product': 1, 'phone': 0}, 'L: apparel': {'product': 1, 'phone': 0}, 'L: those': {'product': 1, 'phone': 0}, 'L: billion': {'product': 1, 'phone': 0}, 'L: cereal': {'product': 1, 'phone': 0}, 'L: "gab"': {'product': 0, 'phone': 1}, 'L: perfume': {'product': 1, 'phone': 0}, 'L: earthquake.': {'product': 0, 'phone': 1}, 'L: jeep': {'product': 1, 'phone': 0}, 'L: 1988-model': {'product': 1, 'phone': 0}, 'L: torpedo': {'product': 1, 'phone': 0}, 'L: lastest': {'product': 1, 'phone': 0}, 'L: marketing': {'product': 2, 'phone': 0}, 'L: broader': {'product': 1, 'phone': 0}, 'L: latest': {'product': 1, 'phone': 0}, 'L: customer': {'product': 0, 'phone': 2}, 'L: diaper': {'product': 1, 'phone': 0}, 'L: "older': {'product': 1, 'phone': 0}, 'L: product': {'product': 4, 'phone': 0}, 'L: these': {'product': 1, 'phone': 0}, 'L: prix': {'product': 1, 'phone': 0}, 'L: ps/2': {'product': 6, 'phone': 0}, 'L: his': {'product': 2, 'phone': 1}, 'L: full': {'product': 2, 'phone': 0}, 'L: your': {'product': 0, 'phone': 1}, 'L: cougar': {'product': 1, 'phone': 0}, 'L: cracker': {'product': 1, 'phone': 0}, 'L: gab-': {'product': 0, 'phone': 1}, 'L: dreamboat': {'product': 1, 'phone': 0}, 'L: kids': {'product': 1, 'phone': 0}, 'L: equipment': {'product': 1, 'phone': 0}, 'L: tire': {'product': 1, 'phone': 0}, 'L: this': {'product': 0, 'phone': 1}, 'L: $1.69': {'product': 1, 'phone': 0}, 'L: open': {'product': 0, 'phone': 1}, 'L: menswear': {'product': 1, 'phone': 0}, 'L: products': {'product': 2, 'phone': 0}, 'L: jewelry': {'product': 1, 'phone': 0}, 'L: shoe': {'product': 1, 'phone': 0}, 'L: million': {'product': 0, 'phone': 1}, 'L: camera': {'product': 1, 'phone': 0}, 'L: that': {'product': 0, 'phone': 1}, "L: women's": {'product': 1, 'phone': 0}, 'L: romance': {'product': 0, 'phone': 1}, 'L: 570,000': {'product': 0, 'phone': 2}, "L: sun's": {'product': 1, 'phone': 0}, 'L: all': {'product': 0, 'phone': 1}, 'L: party': {'product': 0, 'phone': 2}, 'L: software': {'product': 1, 'phone': 0}, 'L: macintosh': {'product': 1, 'phone': 0}, 'L: crossed': {'product': 0, 'phone': 1}, 'L: amiga': {'product': 1, 'phone': 0}, 'L: spectrum': {'product': 1, 'phone': 0}, 'L: direct': {'product': 0, 'phone': 4}, "L: gm's": {'product': 1, 'phone': 0}, 'L: using': {'product': 0, 'phone': 1}, 'L: party-': {'product': 0, 'phone': 1}, 'L: old': {'product': 2, 'phone': 0}, 'L: important': {'product': 0, 'phone': 1}, 'L: ziari': {'product': 1, 'phone': 0}, 'L: and': {'product': 0, 'phone': 1}, 'L: 50,000': {'product': 0, 'phone': 1}, 'L: information': {'product': 0, 'phone': 2}, 'L: specialized': {'product': 1, 'phone': 0}, 'L: its': {'product': 3, 'phone': 0}, 'L: lexus': {'product': 1, 'phone': 0}, 'L: current': {'product': 2, 'phone': 0}, 'L: drink': {'product': 1, 'phone': 0}, 'L: at': {'product': 1, 'phone': 0}, 'L: office-equipment': {'product': 1, 'phone': 0}, 'L: corsica': {'product': 1, 'phone': 0}, 'L: credit': {'product': 1, 'phone': 0}, 'L: building-materials': {'product': 1, 'phone': 0}, 'L: with': {'product': 0, 'phone': 1}, 'L: specialty-food': {'product': 1, 'phone': 0}, 'L: transformers': {'product': 1, 'phone': 0}, 'L: exchange': {'product': 0, 'phone': 1}, 'L: clarion': {'product': 1, 'phone': 0}, 'L: machinery': {'product': 1, 'phone': 0}, 'L: some': {'product': 2, 'phone': 0}, 'L: denton': {'product': 1, 'phone': 0}, 'L: hospital': {'product': 0, 'phone': 1}, 'L: military': {'product': 1, 'phone': 0}, 'L: george': {'product': 1, 'phone': 0}, 'L: long-awaited': {'product': 1, 'phone': 0}, 'L: chemicals': {'product': 1, 'phone': 0}, 'L: nail-polish': {'product': 1, 'phone': 0}, 'L: exclusive': {'product': 1, 'phone': 0}, 'L: 442,000': {'product': 0, 'phone': 1}, 'L: clogged': {'product': 0, 'phone': 1}, 'L: lanterns': {'product': 1, 'phone': 0}, 'L: acquired': {'product': 1, 'phone': 0}, 'L: pw4000': {'product': 1, 'phone': 0}, 'L: private-': {'product': 0, 'phone': 1}, 'L: consumer-products': {'product': 1, 'phone': 0}, 'L: sewing': {'product': 1, 'phone': 0}, 'L: 3,600': {'product': 0, 'phone': 1}, 'L: health-club': {'product': 1, 'phone': 0}, 'L: extending': {'product': 0, 'phone': 1}, 'L: business': {'product': 0, 'phone': 1}, 'L: asynchronous': {'product': 0, 'phone': 1}, "L: coleco's": {'product': 1, 'phone': 0}, 'L: bit': {'product': 1, 'phone': 0}, 'L: zytel': {'product': 1, 'phone': 0}, 'L: another': {'product': 0, 'phone': 1}, 'L: x-rated': {'product': 0, 'phone': 1}, 'L: advertised': {'product': 1, 'phone': 0}, 'L: one-on-one': {'product': 0, 'phone': 1}, 'L: filter': {'product': 1, 'phone': 0}, 'L: 1,800': {'product': 0, 'phone': 1}, 'L: vax': {'product': 2, 'phone': 0}, 'L: emergency': {'product': 0, 'phone': 1}, 'L: priced': {'product': 1, 'phone': 0}, 'L: huge': {'product': 1, 'phone': 0}, 'L: marx': {'product': 1, 'phone': 0}, 'L: subscriber-': {'product': 0, 'phone': 1}, 'L: optometric': {'product': 1, 'phone': 0}, 'L: ground-coffee': {'product': 1, 'phone': 0}, 'L: sex': {'product': 0, 'phone': 1}, 'L: {product}': {'product': 1, 'phone': 0}, 'L: fox': {'product': 1, 'phone': 0}, 'L: chat': {'product': 0, 'phone': 1}, 'L: ordinary': {'product': 0, 'phone': 1}, 'L: communications': {'product': 0, 'phone': 1}, 'L: 3x': {'product': 1, 'phone': 0}, 'L: future': {'product': 1, 'phone': 0}, 'L: "': {'product': 0, 'phone': 1}, 'L: lancome': {'product': 1, 'phone': 0}}
+R: a phone
+{'L: access': {'product': 0, 'phone': 15}, 'R: growth': {'product': 0, 'phone': 3}, 'L: the': {'product': 8, 'phone': 52}, 'R: as': {'product': 2, 'phone': 0}, 'L: struggling': {'product': 1, 'phone': 0}, 'R: was': {'product': 1, 'phone': 12}, 'L: new': {'product': 9, 'phone': 1}, 'R: to': {'product': 6, 'phone': 13}, 'L: computer': {'product': 6, 'phone': 0}, 'R: and': {'product': 10, 'phone': 15}, 'L: previous': {'product': 1, 'phone': 0}, 'L: three': {'product': 1, 'phone': 0}, 'R: at': {'product': 2, 'phone': 3}, 'L: skin-care': {'product': 2, 'phone': 0}, 'R: is': {'product': 6, 'phone': 2}, 'L: atlas': {'product': 1, 'phone': 0}, 'L: furniture': {'product': 1, 'phone': 0}, 'R: could': {'product': 2, 'phone': 0}, 'L: gab': {'product': 0, 'phone': 3}, 'R: have': {'product': 2, 'phone': 1}, 'L: tip': {'product': 0, 'phone': 2}, 'R: that': {'product': 2, 'phone': 5}, 'R: busy': {'product': 0, 'phone': 1}, 'L: telephone': {'product': 0, 'phone': 32}, 'R: increased': {'product': 0, 'phone': 3}, 'L: microprocessor': {'product': 2, 'phone': 0}, 'L: non-food': {'product': 1, 'phone': 0}, 'L: rail-intermodal': {'product': 1, 'phone': 0}, 'R: which': {'product': 3, 'phone': 1}, 'L: dedicated': {'product': 0, 'phone': 1}, 'L: car': {'product': 9, 'phone': 0}, 'R: "': {'product': 4, 'phone': 3}, 'L: complete': {'product': 1, 'phone': 0}, 'R: of': {'product': 56, 'phone': 1}, 'R: making': {'product': 1, 'phone': 2}, 'L: luxury-car': {'product': 1, 'phone': 0}, 'R: may': {'product': 1, 'phone': 0}, 'L: outside': {'product': 0, 'phone': 2}, 'L: smith': {'product': 1, 'phone': 0}, 'R: in': {'product': 4, 'phone': 8}, 'R: but': {'product': 2, 'phone': 2}, 'L: telephone-': {'product': 0, 'phone': 2}, 'R: increase': {'product': 0, 'phone': 1}, 'L: food': {'product': 2, 'phone': 0}, 'L: their': {'product': 1, 'phone': 0}, 'R: used': {'product': 0, 'phone': 1}, 'L: 24': {'product': 0, 'phone': 1}, "L: 's": {'product': 1, 'phone': 0}, 'L: similar': {'product': 2, 'phone': 0}, 'L: r1': {'product': 1, 'phone': 0}, 'R: made': {'product': 1, 'phone': 0}, 'L: a': {'product': 21, 'phone': 1}, 'L: bisexual': {'product': 0, 'phone': 1}, 'R: recently': {'product': 0, 'phone': 2}, 'L: complaint': {'product': 0, 'phone': 1}, 'L: truck': {'product': 1, 'phone': 0}, 'R: through': {'product': 3, 'phone': 0}, 'L: ibm': {'product': 3, 'phone': 0}, 'R: he': {'product': 2, 'phone': 0}, 'L: integrated': {'product': 1, 'phone': 0}, 'L: popular': {'product': 1, 'phone': 0}, 'L: diagnostics': {'product': 1, 'phone': 0}, 'R: showed': {'product': 1, 'phone': 0}, 'L: toll-free': {'product': 0, 'phone': 1}, 'R: for': {'product': 2, 'phone': 2}, 'L: several': {'product': 1, 'phone': 0}, 'R: such': {'product': 1, 'phone': 0}, 'L: trading': {'product': 0, 'phone': 3}, 'R: yesterday': {'product': 0, 'phone': 1}, "L: company's": {'product': 2, 'phone': 0}, 'R: first': {'product': 0, 'phone': 1}, 'L: whose': {'product': 0, 'phone': 2}, 'R: by': {'product': 2, 'phone': 0}, 'R: into': {'product': 2, 'phone': 1}, 'L: radio': {'product': 0, 'phone': 1}, 'R: the': {'product': 1, 'phone': 4}, 'L: such': {'product': 1, 'phone': 0}, 'R: will': {'product': 2, 'phone': 1}, 'L: unsecured': {'product': 0, 'phone': 1}, 'R: while': {'product': 0, 'phone': 2}, 'L: private': {'product': 0, 'phone': 2}, 'L: older': {'product': 1, 'phone': 0}, 'L: carleton': {'product': 1, 'phone': 0}, "R: let's": {'product': 0, 'phone': 1}, 'R: light': {'product': 0, 'phone': 1}, 'L: other': {'product': 1, 'phone': 1}, 'L: subscriber': {'product': 0, 'phone': 2}, 'R: charges': {'product': 0, 'phone': 2}, 'L: fragrance': {'product': 1, 'phone': 0}, 'R: from': {'product': 3, 'phone': 1}, 'L: pc': {'product': 1, 'phone': 0}, "R: wouldn't": {'product': 1, 'phone': 0}, 'R: over': {'product': 0, 'phone': 1}, 'R: were': {'product': 2, 'phone': 5}, 'L: dead': {'product': 0, 'phone': 1}, 'L: aerospace': {'product': 1, 'phone': 0}, 'L: in': {'product': 1, 'phone': 0}, 'R: ranging': {'product': 1, 'phone': 0}, 'L: gm-10': {'product': 1, 'phone': 0}, 'L: apparel': {'product': 1, 'phone': 0}, 'L: those': {'product': 1, 'phone': 0}, 'L: billion': {'product': 1, 'phone': 0}, 'L: cereal': {'product': 1, 'phone': 0}, 'R: with': {'product': 2, 'phone': 1}, 'L: "gab"': {'product': 0, 'phone': 1}, 'L: perfume': {'product': 1, 'phone': 0}, 'R: "elizabeth': {'product': 1, 'phone': 0}, 'L: earthquake': {'product': 0, 'phone': 1}, 'R: called': {'product': 1, 'phone': 1}, 'L: jeep': {'product': 1, 'phone': 0}, 'L: 1988-model': {'product': 1, 'phone': 0}, 'R: this': {'product': 1, 'phone': 0}, 'L: torpedo': {'product': 1, 'phone': 0}, 'L: lastest': {'product': 1, 'phone': 0}, 'L: marketing': {'product': 2, 'phone': 0}, 'R: grew': {'product': 0, 'phone': 3}, 'L: broader': {'product': 1, 'phone': 0}, 'L: latest': {'product': 1, 'phone': 0}, 'L: customer': {'product': 0, 'phone': 2}, 'L: diaper': {'product': 1, 'phone': 0}, 'L: "older': {'product': 1, 'phone': 0}, 'R: products"': {'product': 1, 'phone': 0}, 'L: product': {'product': 4, 'phone': 0}, 'R: particularly': {'product': 1, 'phone': 0}, 'L: these': {'product': 1, 'phone': 0}, 'L: prix': {'product': 1, 'phone': 0}, 'L: ps/2': {'product': 6, 'phone': 0}, 'L: his': {'product': 2, 'phone': 1}, 'L: full': {'product': 2, 'phone': 0}, 'R: under': {'product': 1, 'phone': 0}, 'R: just': {'product': 0, 'phone': 1}, 'R: are': {'product': 3, 'phone': 1}, 'L: your': {'product': 0, 'phone': 1}, 'L: cougar': {'product': 1, 'phone': 0}, 'R: no': {'product': 0, 'phone': 1}, 'L: cracker': {'product': 1, 'phone': 0}, 'R: once': {'product': 0, 'phone': 1}, 'R: dialed': {'product': 0, 'phone': 1}, 'L: gab-': {'product': 0, 'phone': 1}, 'R: proprietors': {'product': 0, 'phone': 1}, 'L: dreamboat': {'product': 1, 'phone': 0}, 'R: went': {'product': 0, 'phone': 3}, 'R: open': {'product': 0, 'phone': 2}, 'L: kids': {'product': 1, 'phone': 0}, 'L: equipment': {'product': 1, 'phone': 0}, 'L: tire': {'product': 1, 'phone': 0}, 'L: this': {'product': 0, 'phone': 1}, 'L: 69': {'product': 1, 'phone': 0}, 'L: open': {'product': 0, 'phone': 1}, 'L: menswear': {'product': 1, 'phone': 0}, 'L: products': {'product': 2, 'phone': 0}, 'R: had': {'product': 1, 'phone': 0}, 'L: jewelry': {'product': 1, 'phone': 0}, 'L: shoe': {'product': 1, 'phone': 0}, 'R: between': {'product': 0, 'phone': 1}, 'R: or': {'product': 0, 'phone': 1}, 'L: million': {'product': 0, 'phone': 1}, 'L: camera': {'product': 1, 'phone': 0}, 'L: that': {'product': 0, 'phone': 1}, 'R: if': {'product': 0, 'phone': 1}, 'R: --': {'product': 1, 'phone': 4}, "L: women's": {'product': 1, 'phone': 0}, 'R: where': {'product': 1, 'phone': 0}, 'R: built': {'product': 1, 'phone': 0}, 'L: romance': {'product': 0, 'phone': 1}, 'L: 000': {'product': 0, 'phone': 4}, 'R: mainly': {'product': 0, 'phone': 2}, "L: sun's": {'product': 1, 'phone': 0}, 'L: all': {'product': 0, 'phone': 1}, 'L: party': {'product': 0, 'phone': 2}, 'L: software': {'product': 1, 'phone': 0}, 'R: pacing': {'product': 1, 'phone': 0}, 'L: macintosh': {'product': 1, 'phone': 0}, 'R: rose': {'product': 1, 'phone': 0}, 'L: crossed': {'product': 0, 'phone': 1}, 'L: amiga': {'product': 1, 'phone': 0}, 'L: spectrum': {'product': 1, 'phone': 0}, 'R: has': {'product': 2, 'phone': 0}, 'L: direct': {'product': 0, 'phone': 4}, "L: gm's": {'product': 1, 'phone': 0}, 'L: using': {'product': 0, 'phone': 1}, 'R: they': {'product': 1, 'phone': 2}, 'R: moved': {'product': 1, 'phone': 0}, 'R: a': {'product': 0, 'phone': 4}, 'R: because': {'product': 1, 'phone': 1}, 'L: party-': {'product': 0, 'phone': 1}, 'R: effect': {'product': 0, 'phone': 1}, 'L: old': {'product': 2, 'phone': 0}, 'L: important': {'product': 0, 'phone': 1}, 'L: ziari': {'product': 1, 'phone': 0}, 'L: and': {'product': 0, 'phone': 1}, 'R: adapters': {'product': 0, 'phone': 1}, 'R: last': {'product': 2, 'phone': 1}, 'R: says': {'product': 0, 'phone': 1}, 'L: information': {'product': 0, 'phone': 2}, 'R: said': {'product': 1, 'phone': 0}, 'L: specialized': {'product': 1, 'phone': 0}, 'L: its': {'product': 3, 'phone': 0}, 'L: lexus': {'product': 1, 'phone': 0}, 'R: 2': {'product': 1, 'phone': 0}, 'L: current': {'product': 2, 'phone': 0}, 'L: drink': {'product': 1, 'phone': 0}, 'L: at': {'product': 1, 'phone': 0}, 'L: office-equipment': {'product': 1, 'phone': 0}, 'L: corsica': {'product': 1, 'phone': 0}, 'L: credit': {'product': 1, 'phone': 0}, 'L: building-materials': {'product': 1, 'phone': 0}, 'L: with': {'product': 0, 'phone': 1}, 'L: specialty-food': {'product': 1, 'phone': 0}, 'R: so': {'product': 1, 'phone': 1}, 'L: transformers': {'product': 1, 'phone': 0}, 'R: tonka': {'product': 1, 'phone': 0}, 'L: exchange': {'product': 0, 'phone': 1}, 'R: be': {'product': 0, 'phone': 1}, 'L: clarion': {'product': 1, 'phone': 0}, 'L: machinery': {'product': 1, 'phone': 0}, 'R: fell': {'product': 1, 'phone': 0}, 'R: sir': {'product': 0, 'phone': 1}, 'R: like': {'product': 0, 'phone': 2}, 'L: some': {'product': 2, 'phone': 0}, 'R: it': {'product': 1, 'phone': 0}, 'R: according': {'product': 0, 'phone': 1}, 'L: denton': {'product': 1, 'phone': 0}, 'L: hospital': {'product': 0, 'phone': 1}, 'L: military': {'product': 1, 'phone': 0}, 'L: george': {'product': 1, 'phone': 0}, 'R: during': {'product': 0, 'phone': 1}, 'L: long-awaited': {'product': 1, 'phone': 0}, 'L: chemicals': {'product': 1, 'phone': 0}, 'L: nail-polish': {'product': 1, 'phone': 0}, 'L: exclusive': {'product': 1, 'phone': 0}, 'L: clogged': {'product': 0, 'phone': 1}, 'L: lanterns': {'product': 1, 'phone': 0}, 'L: acquired': {'product': 1, 'phone': 0}, 'R: planned': {'product': 1, 'phone': 0}, 'L: pw4000': {'product': 1, 'phone': 0}, 'R: appealing': {'product': 0, 'phone': 1}, 'L: private-': {'product': 0, 'phone': 1}, 'L: consumer-products': {'product': 1, 'phone': 0}, 'R: there': {'product': 1, 'phone': 0}, "R: won't": {'product': 1, 'phone': 0}, 'L: sewing': {'product': 1, 'phone': 0}, 'L: 600': {'product': 0, 'phone': 1}, 'L: health-club': {'product': 1, 'phone': 0}, 'R: bally': {'product': 1, 'phone': 0}, 'L: extending': {'product': 0, 'phone': 1}, 'L: business': {'product': 0, 'phone': 1}, 'L: asynchronous': {'product': 0, 'phone': 1}, "L: coleco's": {'product': 1, 'phone': 0}, 'L: bit': {'product': 1, 'phone': 0}, 'L: zytel': {'product': 1, 'phone': 0}, 'L: another': {'product': 0, 'phone': 1}, 'L: x-rated': {'product': 0, 'phone': 1}, 'L: advertised': {'product': 1, 'phone': 0}, 'L: one-on-one': {'product': 0, 'phone': 1}, 'L: filter': {'product': 1, 'phone': 0}, 'L: 800': {'product': 0, 'phone': 1}, 'L: vax': {'product': 2, 'phone': 0}, "R: cray's": {'product': 1, 'phone': 0}, 'L: emergency': {'product': 0, 'phone': 1}, 'R: played': {'product': 0, 'phone': 1}, 'L: priced': {'product': 1, 'phone': 0}, 'R: included': {'product': 1, 'phone': 0}, 'L: huge': {'product': 1, 'phone': 0}, 'L: marx': {'product': 1, 'phone': 0}, 'L: subscriber-': {'product': 0, 'phone': 1}, 'R: charge': {'product': 0, 'phone': 1}, 'L: optometric': {'product': 1, 'phone': 0}, 'L: ground-coffee': {'product': 1, 'phone': 0}, 'L: sex': {'product': 0, 'phone': 1}, 'L: {product}': {'product': 1, 'phone': 0}, 'L: fox': {'product': 1, 'phone': 0}, 'L: chat': {'product': 0, 'phone': 1}, 'L: ordinary': {'product': 0, 'phone': 1}, 'R: jumped': {'product': 0, 'phone': 1}, 'L: communications': {'product': 0, 'phone': 1}, 'L: 3x': {'product': 1, 'phone': 0}, 'L: future': {'product': 1, 'phone': 0}, 'R: hormel': {'product': 1, 'phone': 0}, 'L: "': {'product': 0, 'phone': 1}, 'R: noise': {'product': 0, 'phone': 1}, 'R: anymore': {'product': 1, 'phone': 0}, 'L: lancome': {'product': 1, 'phone': 0}}

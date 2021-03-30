@@ -8,6 +8,7 @@ import re
 import csv
 import itertools
 from collections import Counter
+import string
 
 
 def main(argv):
@@ -17,17 +18,26 @@ def main(argv):
 
     openTrainFile = open(trainFile, "r")
     contentsTrain = openTrainFile.read().lower()
+    contentsTrain=contentsTrain.replace(string.punctuation,"")
 
     openTestFile = open(testingFile, "r")
     contentsTest = openTestFile.read().lower()
+
+
+    #contentsTrain=removeBrackets(contentsTrain)
 
     #remove words:corpus, lexlt,context and instance from file and replace with a white space
     contentsTrain=re.sub(r'<[/]?corpus(.*)>\s|<[/]?lexelt(.*)>\s|<[/]?context>\s|</instance>\s',"",contentsTrain)
     #print(contentsTrain)
 
     contentsTrain=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>'," ",contentsTrain)
+    #contentsTrain=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>|.|--|,|"'," ",contentsTrain)
+
+    contentsTrain=re.sub(r'[!#?,.:;]'," ",contentsTrain)
 
     contentsTrain = re.sub( r"\<head\>lines\<\/head\>", "<head>line</head>",contentsTrain)
+
+    
 
     #print(contentsTrain)
 
@@ -126,19 +136,30 @@ def main(argv):
     # for pargarph in trainWordsList:
     #     print(pargarph) #same as split
 
-    count =0
-    matchesIndicies =[]
-    for index in range(0,len(trainWordsList)):
+    # count =0
+    # matchesIndicies =[]
+    # for index in range(0,len(trainWordsList)):
 
+    #     for paragraph in trainWordsList:
+    #         for word in paragraph:
+    #             #count+=1
+    #             if word =="<head>line</head>":
+    #                 index=count
+    #                 matchesIndicies.append(count)
+    #                 #print(word,index)
+    #                 #print(matchesIndicies)
+    #             count+=1
+
+    matchesIndicies=[]
+    for index in range(0,len(trainWordsList)):
         for paragraph in trainWordsList:
-            for word in paragraph:
-                #count+=1
-                if word =="<head>line</head>":
-                    index=count
-                    matchesIndicies.append(count)
-                    #print(word,index)
-                    #print(matchesIndicies)
-                count+=1
+            for i,v in enumerate(paragraph):
+                if v=="<head>line</head>":
+                    matchesIndicies.append(i)
+    # print(matchesIndicies)
+    # prin
+    
+
             
     #print("Match: ", matchesIndicies) 
 
@@ -158,23 +179,104 @@ def main(argv):
 
 
 
+    #trainWordsList=re.sub(r'[!#?,.:";]',"",trainWordsList)
 
     d={}
+
+   # print(trainWordsList)
+
+    #print(len(senses))
+    #print(len(trainWordsList))
+
+
+    def getMatchIndex(contents):
+        for j in range (0,len(matchesIndicies)):
+            return matchesIndicies[j]
+            matchesIndicies.remove(matchesIndicies[j])
+    
+    def matchFound(index):
+        for j in range(0,len(matchesIndicies)):
+            if (j==index):
+                return matchesIndicies[j]
+
+    
         
     
     
     for index in range(0,len(trainWordsList)):
-        contents=trainWordsList[index]
+        print("index: ",index)
+        contents=trainWordsList[index] #pargaph
+
+        #print(len(contents))
         
 
         currentSense = senses[index]
-        print(currentSense)
+        #print(currentSense)
 
-        for j in range(0,len(contents)):
+        # for j in range(0,len(contents)):
             
-            if(contents[j])=="<head>line</head>":
+        #     if(contents[j])=="<head>line</head>":
+        #         locate = j
+        #        print("inner",j)
+        # print("Matching Indicies: ", matchesIndicies)
+
+
+        # for j in range(0,len(contents)):
+        #     locate = matchesIndicies[j]
+
+        # for j in range(0,len(contents)):
+        #     for i in range(0,len(matchesIndicies)):
+        #         locate = matchesIndicies[i]
+        #         print(locate)
+            # locate=getMatchIndex(contents[j])
+            # print(locate)
+
+        # for j in range(0,len(contents)):
+        #     for i in range(0,len(matchesIndicies)):
+        #         if(contents[j]=="<head>line</head>"):
+        #             if(j==matchesIndicies[i]):
+        #                 locate = j
+        #                 print(locate)
+
+        # for j in range(0,len(matchesIndicies)):
+        #     locate = matchesIndicies[j]
+        #     print("locate: ",locate)
+        
+        # for j in range(0,len(contents)):
+        #     for i in range(0,len(matchesIndicies)):
+        #         if(contents[j]=="<head>line</head>"):
+        #             if(j==matchesIndicies[i]):
+        #                 locate = j
+        #                 print("loc: ", locate)
+
+
+        #this somewhat works but out of range
+        # for j in range(0,len(matchesIndicies)):
+        #     locate = matchesIndicies[j]
+        #     print("act: ", locate)
+
+        # locate=0
+        # for j in range(0,len(contents)):
+        #     if (contents[j]=="<head><line></head>"):
+        #         #print("match: ",j)
+        #         locate=j
+
+
+        # for j in range(0,len(contents)):
+        #     locate = matchFound(j)
+        #     print(locate)
+
+        matchLine = "<head>line</head>"
+        for j in range(0,len(contents)):
+            matchF=re.search(matchLine,contents[j])
+            if matchF:
                 locate = j
-                #print(j)
+
+
+
+        
+
+    
             
         if (locate-1) >= 0:
             left_word = "L: " + contents[locate-1] #+" "+ contents[locate-1]
@@ -193,9 +295,27 @@ def main(argv):
                     d[left_word]["phone"]+=1
                 else:
                     d[left_word]["product"]+=1
+        if(locate+1) <len(contents):
+            right_word = "R: " + contents[locate+1] #+" "+ contents[locate-1]
+            print(right_word,currentSense)
+
+            if right_word not in d:
+                d[right_word]={}
+                d[right_word]["product"]=0
+                d[right_word]["phone"]=0
+                # if currentSense=="phone":
+                #     d[left_word]["phone"]=1
+                # else:
+                #     d[left_word]["product"]=1
+            if right_word in d:
+                if currentSense=="phone":
+                    d[right_word]["phone"]+=1
+                else:
+                    d[right_word]["product"]+=1
+
 
     print(d) # 8 product, 52 phone - the, new - 9 prod , 1 phone
-    #his prod 3, phone 1 in file, should be, 1 phone, 2 prod
+    # #his prod 3, phone 1 in file, should be, 1 phone, 2 prod
                 
 
                 
@@ -213,49 +333,18 @@ def main(argv):
 
 
 
+# def removeBrackets(trainFile):
+#     punc = ''',".--'''
+#     for p in trainFile:
+#         if p in punc:
+#             trainFile=trainFile.replace(p,"")
 
-
-
-       
-    
-
-
-
-
-
-   
-
+    # return trainFile
 
 def split_list(finTrain):
     return[item.split() for item in finTrain]
 
     
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
 
 
 
