@@ -31,13 +31,10 @@ def main(argv):
     #print(contentsTrain)
 
     contentsTrain=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>'," ",contentsTrain)
-    #contentsTrain=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>|.|--|,|"'," ",contentsTrain)
 
     contentsTrain=re.sub(r'[!#?,.:;]'," ",contentsTrain)
 
     contentsTrain = re.sub( r"\<head\>lines\<\/head\>", "<head>line</head>",contentsTrain)
-
-    
 
     #print(contentsTrain)
 
@@ -104,33 +101,7 @@ def main(argv):
 
 
 
-    #count=0
-    #index=0
-    #####################################################
-    #PRETENSE:split before
-    # matchIndex=0
-    # for paragraph in trainWordsList:
-    #     for index,word in enumerate(paragraph):
-    #     #for word in paragraph:
-    #         #print(index,word)
-    #         #count+=1
-    #         if word =="<head>line</head>":
-    #             matchIndex=index
-    #             print(matchIndex,word)
-
-    #             left = matchIndex-1
-    #             if(matchIndex-1)>0:
-    #                 print(word[index-1])
-    #             #count+=1
-
-    #             # if(matchIndex-1)>=0:
-    #             #     print(word[matchIndex-1])
-
-    #     # if (index-1)>=0:
-    #     #     left = "L:" + word[index]
-    #     #     print(left)
-
-        #####################################################
+    
 
     # wordList =[]
     # for pargarph in trainWordsList:
@@ -166,105 +137,21 @@ def main(argv):
     #now we know where all of it occurs
 
 
-    # for index in range(0,len(trainWordsList)):
-    #     contents = trainWordsList[index]
-    #     print(contents)
-
-    #     for i,val in enumerate(trainWordsList[index]):
-    #         #print(val)
-    #         if val =="<head>line</head>":
-    #             pos=i
-    #             #left_word = "L: " + val
-    #             #print(left_word)
-
-
-
-    #trainWordsList=re.sub(r'[!#?,.:";]',"",trainWordsList)
 
     d={}
 
-   # print(trainWordsList)
 
-    #print(len(senses))
-    #print(len(trainWordsList))
-
-
-    def getMatchIndex(contents):
-        for j in range (0,len(matchesIndicies)):
-            return matchesIndicies[j]
-            matchesIndicies.remove(matchesIndicies[j])
-    
-    def matchFound(index):
-        for j in range(0,len(matchesIndicies)):
-            if (j==index):
-                return matchesIndicies[j]
-
-    
-        
-    
-    
+    #list is a list of words so it looks like 
+    #[[wordp1,wordp1,wordp1],[wordp2,wordp2,wordp2]]
     for index in range(0,len(trainWordsList)):
-        print("index: ",index)
-        contents=trainWordsList[index] #pargaph
+        #print("index: ",index)
+        contents=trainWordsList[index] #pargraph
 
         #print(len(contents))
         
 
         currentSense = senses[index]
         #print(currentSense)
-
-        # for j in range(0,len(contents)):
-            
-        #     if(contents[j])=="<head>line</head>":
-        #         locate = j
-        #        print("inner",j)
-        # print("Matching Indicies: ", matchesIndicies)
-
-
-        # for j in range(0,len(contents)):
-        #     locate = matchesIndicies[j]
-
-        # for j in range(0,len(contents)):
-        #     for i in range(0,len(matchesIndicies)):
-        #         locate = matchesIndicies[i]
-        #         print(locate)
-            # locate=getMatchIndex(contents[j])
-            # print(locate)
-
-        # for j in range(0,len(contents)):
-        #     for i in range(0,len(matchesIndicies)):
-        #         if(contents[j]=="<head>line</head>"):
-        #             if(j==matchesIndicies[i]):
-        #                 locate = j
-        #                 print(locate)
-
-        # for j in range(0,len(matchesIndicies)):
-        #     locate = matchesIndicies[j]
-        #     print("locate: ",locate)
-        
-        # for j in range(0,len(contents)):
-        #     for i in range(0,len(matchesIndicies)):
-        #         if(contents[j]=="<head>line</head>"):
-        #             if(j==matchesIndicies[i]):
-        #                 locate = j
-        #                 print("loc: ", locate)
-
-
-        #this somewhat works but out of range
-        # for j in range(0,len(matchesIndicies)):
-        #     locate = matchesIndicies[j]
-        #     print("act: ", locate)
-
-        # locate=0
-        # for j in range(0,len(contents)):
-        #     if (contents[j]=="<head><line></head>"):
-        #         #print("match: ",j)
-        #         locate=j
-
-
-        # for j in range(0,len(contents)):
-        #     locate = matchFound(j)
-        #     print(locate)
 
         matchLine = "<head>line</head>"
         for j in range(0,len(contents)):
@@ -273,13 +160,9 @@ def main(argv):
                 locate = j
 
 
-
-        
-
-    
-            
+        #Yarowsky's Rule: Word immediately to the left
         if (locate-1) >= 0:
-            left_word = "L: " + contents[locate-1] #+" "+ contents[locate-1]
+            left_word = "L-1: " + contents[locate-1] 
             print(left_word,currentSense)
 
             if left_word not in d:
@@ -295,8 +178,27 @@ def main(argv):
                     d[left_word]["phone"]+=1
                 else:
                     d[left_word]["product"]+=1
+        #Yarowsky's Rule: Word found in -2 word window
+        if(locate-2) >=0:
+            left_word_2 = "L-2: " + contents[locate-2]
+            print(left_word_2,currentSense)
+
+            if left_word_2 not in d:
+                d[left_word_2]={}
+                d[left_word_2]["product"]=0
+                d[left_word_2]["phone"]=0
+                # if currentSense=="phone":
+                #     d[left_word]["phone"]=1
+                # else:
+                #     d[left_word]["product"]=1
+            if left_word_2 in d:
+                if currentSense=="phone":
+                    d[left_word_2]["phone"]+=1
+                else:
+                    d[left_word_2]["product"]+=1
+        #Yarowsky's Rule: Word immediately to the right
         if(locate+1) <len(contents):
-            right_word = "R: " + contents[locate+1] #+" "+ contents[locate-1]
+            right_word = "R+1: " + contents[locate+1] 
             print(right_word,currentSense)
 
             if right_word not in d:
@@ -312,7 +214,69 @@ def main(argv):
                     d[right_word]["phone"]+=1
                 else:
                     d[right_word]["product"]+=1
+        #Yarowsky's Rule: Word found in +2 word window
+        if(locate+2) <len(contents):
+            right_word_2 = "R+2: " + contents[locate+2] 
+            print(right_word_2,currentSense)
 
+            if right_word_2 not in d:
+                d[right_word_2]={}
+                d[right_word_2]["product"]=0
+                d[right_word_2]["phone"]=0
+                # if currentSense=="phone":
+                #     d[left_word]["phone"]=1
+                # else:
+                #     d[left_word]["product"]=1
+            if right_word_2 in d:
+                if currentSense=="phone":
+                    d[right_word_2]["phone"]+=1
+                else:
+                    d[right_word_2]["product"]+=1
+        #Yarowsky's Rule: Pair of words at offsets -2 and -1
+        if(locate-2) and (locate-1) <len(contents):
+            pair_left = "L-2-1: " + contents[locate-2] + " " + contents[locate-1]
+            print(pair_left)
+
+            if pair_left not in d:
+                d[pair_left]={}
+                d[pair_left]["product"]=0
+                d[pair_left]["phone"]=0
+
+            if pair_left in d:
+                if currentSense=="phone":
+                    d[pair_left]["phone"]+=1
+                else:
+                    d[pair_left]["product"]+=1
+        #Yarowsky's Rule: Pair of words at offset -1 and +1
+        if(locate-1) and (locate+1) <len(contents):
+            pair_mid = "M-1+1: " + contents[locate-1] + " " + contents[locate+1]
+            print(pair_mid)
+
+            if pair_mid not in d:
+                d[pair_mid]={}
+                d[pair_mid]["product"]=0
+                d[pair_mid]["phone"]=0
+
+            if pair_mid in d:
+                if currentSense=="phone":
+                    d[pair_mid]["phone"]+=1
+                else:
+                    d[pair_mid]["product"]+=1
+        #Yarowsky's Rule: Pair of words at offset +1 and +2
+        if(locate+1) and (locate+2) <len(contents):
+            pair_right = "R+1+2: " + contents[locate+1] + " " + contents[locate+2]
+            print(pair_right)
+
+            if pair_right not in d:
+                d[pair_right]={}
+                d[pair_right]["product"]=0
+                d[pair_right]["phone"]=0
+
+            if pair_right in d:
+                if currentSense=="phone":
+                    d[pair_right]["phone"]+=1
+                else:
+                    d[pair_right]["product"]+=1
 
     print(d) # 8 product, 52 phone - the, new - 9 prod , 1 phone
     # #his prod 3, phone 1 in file, should be, 1 phone, 2 prod
