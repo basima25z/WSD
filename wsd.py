@@ -35,8 +35,18 @@ def main(argv):
     contentsTrain=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>',"",contentsTrain)
     contentsTest=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>',"",contentsTest)
 
-    contentsTrain=re.sub(r'[!#?,:;]',"",contentsTrain)
-    contentsTest=re.sub(r'[!#?,:;]',"",contentsTest)
+    contentsTrain=re.sub(r'[!#?,.:;]',"",contentsTrain) #did remove periods before but added space in 4.5 so it was 4 5
+    contentsTest=re.sub(r'[!#?,:.;]',"",contentsTest) #got rid of period, may affect decimals somwhats like the 4.5
+
+    #period only
+    #contentsTrain=re.sub(r'((\d+)[\.])(?!([\d]+))',"",contentsTrain)
+    #contentsTest=re.sub(r'((\d+)[\.])(?!([\d]+))',"",contentsTest)
+    
+
+  
+
+    #contentsTest=re.sub(r'(.*)\.(?!\d)',"",contentsTest)
+
 
     #print("train after sub",contentsTrain)
     #print("test after sub", contentsTest)
@@ -458,12 +468,127 @@ def main(argv):
 
     print("LOG DICT: ", log_dict)
 
+    # matchKey = "L-1: access"
+    # for keyL, valL in log_dict.items():
+    #     if keyL ==matchKey:
+    #         print("match key log: ", keyL)
+    #         print("mtach val log: ", valL)
+
+###############TESTING##############################
+    print("###############TESTING##############################")
+
+    maxLog =0
+    miniLogDict ={}
+
+
+    for index in range(0,len(testWordsList)): #testWordsList
+        #print("index: ",index)
+        contentsTest=testWordsList[index] #pargraph
+
+        #print(len(contents))
+        
+
+        #currentSenseLine = senses[index]
+        #print(currentSense)
+
+        matchLine = "<head>line</head>"
+        for p in range(0,len(contentsTest)):
+            matchF=re.search(matchLine,contentsTest[p])
+            if matchF:
+                locateTest = p
+                #print("location: ",locateTest)
+        
+
+        if (locateTest-1) >= 0:
+            left_word_test = "L-1: " + contentsTest[locateTest-1] 
+            print("left test: ",left_word_test)
+
+
+            # for keyL, valL in log_dict.items():
+            #     if keyL ==left_word_test:
+            #         print("match key log: ", keyL)
+            #         print("match val log: ", valL)
+            #         miniLogDict[keyL] = valL
+                    #maxVal = valL #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    #
+        if (locateTest-2) >= 0:
+            left_word_test_2 = "L-2: " + contentsTest[locateTest-2] 
+            print("left test -2: ",left_word_test_2)
+
+
+            # for keyL, valL in log_dict.items():
+            #     if keyL ==left_word_test_2:
+            #         print("match key log: ", keyL)
+            #         print("match val log: ", valL)
+            #         miniLogDict[keyL] = valL
+
+        if(locateTest+1) <len(contentsTest):
+            right_word_test = "R+1: " + contentsTest[locateTest+1] 
+            print("right test: ", right_word_test)
+
+            
+        #Yarowsky's Rule: Word found in -/+2 word window
+        if(locateTest-2) and (locateTest+2) <len(contentsTest): #and (locate-2) 
+            right_word_wind_test_1 = "R_wind_+1: " + contentsTest[locateTest+1]
+            right_word_wind_test_2="R_wind_+2: " +contentsTest[locateTest+2]
+
+            left_word_wind_test_1= "L_wind_-1: " + contentsTest[locateTest-1]
+            left_word_wind_test_2= "L_wind_-2: " + contentsTest[locateTest-2]
+
+            print("test",right_word_wind_test_1)
+            print("test",right_word_wind_test_2)
+            print("test",left_word_wind_test_1)
+            print("test",left_word_wind_test_2)
+
+        if(locateTest-2) and (locateTest-1) <len(contentsTest):
+            pair_left_test = "L-2-1: " + contentsTest[locateTest-2] + " " + contentsTest[locateTest-1]
+            print("test",pair_left_test)
+
+            
+        #Yarowsky's Rule: Pair of words at offset -1 and +1
+        if(locateTest-1) and (locateTest+1) <len(contentsTest):
+            pair_mid_test = "M-1+1: " + contentsTest[locateTest-1] + " " + contentsTest[locateTest+1]
+            print("test",pair_mid_test)
+
+        
+        #Yarowsky's Rule: Pair of words at offset +1 and +2
+        if(locateTest+1) and (locateTest+2) <len(contentsTest):
+            pair_right_test = "R+1+2: " + contentsTest[locateTest+1] + " " + contentsTest[locateTest+2]
+            print("test",pair_right_test)
+
+
+        #RULE OF YOUR OWN
+
+        if(locateTest-4)>=0:
+            left_word_test_4 = "R-4: " + contentsTest[locateTest-4]
+            print(left_word_test_4)
+
+
+        #the first test paragraph won't execute the statments going to the right of the line bc nothing is to the right, bc its the last word
+
+        
+        #print("mini: ",miniLogDict)
+        
+
+
+            
+
+
+            
+
+        
+    
+
+
+
+
         
 # Now have to clean test data  - cleaned
 # if word (which is already split by word ) --> if word matches <head>line</head>
 # capture words before, after etc. 
 # if word appears in log dict --> keep track of each if statment --> get max 
 # whatever max is --> find if in the sense dict, it occurs more with phone or product
+
 
 
 
