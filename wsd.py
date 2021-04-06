@@ -9,6 +9,7 @@ import csv
 import itertools
 from collections import Counter
 import string
+import math
 
 
 def main(argv):
@@ -29,23 +30,34 @@ def main(argv):
     #remove words:corpus, lexlt,context and instance from file and replace with a white space
     contentsTrain=re.sub(r'<[/]?corpus(.*)>\s|<[/]?lexelt(.*)>\s|<[/]?context>\s|</instance>\s',"",contentsTrain)
     #print(contentsTrain)
+    contentsTest=re.sub(r'<[/]?corpus(.*)>\s|<[/]?lexelt(.*)>\s|<[/]?context>\s|</instance>\s',"",contentsTest)
 
     contentsTrain=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>',"",contentsTrain)
+    contentsTest=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>',"",contentsTest)
 
     contentsTrain=re.sub(r'[!#?,:;]',"",contentsTrain)
+    contentsTest=re.sub(r'[!#?,:;]',"",contentsTest)
 
-    #print(contentsTrain)
+    #print("train after sub",contentsTrain)
+    #print("test after sub", contentsTest)
 
 
     contentsTrain = re.sub( r"\<head\>lines\<\/head\>", "<head>line</head>",contentsTrain)
+    contentsTest = re.sub( r"\<head\>lines\<\/head\>", "<head>line</head>",contentsTest)
 
     #print(contentsTrain)
 
     #need to make a list of sense with freq to help with log 
-
+    contentsTest = re.sub(r"<[/]?instance(.*)>\s", "", contentsTest)
 
     contentsTrainSplit=contentsTrain.splitlines() #whole file is split by \n, each \n is put in its own index
-    #print(contentsTrainSplit)
+    contentsTestSplit = contentsTest.splitlines()
+    #print("Contents Train",contentsTrainSplit)
+    # print("length train", len(contentsTrainSplit))
+    print("Contents Test", contentsTestSplit)
+    # print("length test", len(contentsTestSplit))
+
+    
 
 
     pattern='senseid="([^"]*)"'
@@ -74,8 +86,14 @@ def main(argv):
 
     for i in contentsTrainSplit[2::3]: #list slicing gets rid of the instance id and sense id, now we just have the text we need
         finTrain.append(i)
+    print("fin train", finTrain)
 
-    #print(finTrain) #this is accurate
+    #finTest =[]
+
+    # for i in contentsTestSplit[2::3]: #list slicing gets rid of the instance id and sense id, now we just have the text we need
+    #     finTest.append(i)
+
+    # print("fin test",finTest) #this is accurate
 
     #First rule is k-1
     #the dict should look like: {word_k-1:{sense1,freq}{sense2,freq}, word_k-1:{sense1,freq} {sense_2,freq}}
@@ -100,6 +118,9 @@ def main(argv):
     #use index to retieve word left to 
 
     trainWordsList = split_list(finTrain)
+    #print("trainwordsList", trainWordsList)
+    testWordsList = split_list(contentsTestSplit)
+    print("testwordlist", testWordsList)
     #print(trainWordsList)
 
 
@@ -336,7 +357,7 @@ def main(argv):
                 else:
                     d[left_word_4]["product"]+=1
 
-    print(d) # 8 product, 52 phone - the, new - 9 prod , 1 phone
+    print("SENSE DICT: ", d) # 8 product, 52 phone - the, new - 9 prod , 1 phone
     # #his prod 3, phone 1 in file, should be, 1 phone, 2 prod
 
 
@@ -352,12 +373,100 @@ def main(argv):
     #in the training data, if word is found --> any occurance, calcilate the log and return the highest
 
     #Things to consider when refractoring: there may be no words if the line ends with the word line, so may have to change rule from +4 to -4?
+
+
+    print("Phone Count: ", phone_freq_count) #178
+    print("Product Count: ", prod_freq_count) #196
+
+
+    #log likely score
+    # P1 = "word_sense_k_1" "how many time phone occured within word send k-1" / total phone_freq_count
+    # p2 = "Word_sense_k_1" "how many times product occured within word sense k_1"/ total prod_freq_count
+    # LL = log (p1/p2) --> this goes into log dict for that word sense --> {word_k-1: LL score, word_k_2: LL score}
+
+    #my dict looks like : {'L-1: access': {'product': 0, 'phone': 15}, 'L-2: 4.5%': {'product': 0, 'phone': 1}, 'R+1: growth': {'product': 0, 'phone': 3}
     
 
+    # for key,value in d:
+    #     product = value["product"]
+    #     phone = value["phone"]
+    #     print(key,product,phone)
 
-                
+    # for i in d.values():
+    #     print(i)
+    #     for j in d[i].values():
+    #         print(j)
 
-  
+    #works
+    # for key,value in d.items():
+    #     print("Key: ",key) #Key: access
+    #     print("Value: ", value) #Value: {'product': 0, 'phone': 15}
+
+
+
+    #WORKS
+    # for i in d:
+    #     for j,k in d[i].items():
+    #         print(i,j, "-->",k)
+
+    
+    # products_count = 20 
+    # result_dict = {word:test_dict[word]['phone']/products_count for word in test_dict.keys()}
+    result_dict_phone = {word:d[word]['phone']/phone_freq_count for word in d.keys()}
+    result_dict_product = {word:d[word]['product']/prod_freq_count for word in d.keys()}
+    print("result_phone: ", result_dict_phone)
+    print("result_prod: ", result_dict_product)
+
+
+    # for key in result_dict_product:
+    #     li = d[key]
+    #     print("LIT: ", li) #{'product': 0, 'phone': 15}
+
+    for key,value in result_dict_product.items():
+        #print("key: ", key)
+        #print("value: ", value)
+        if (value==0.0):
+            result_dict_product[key]=0.1
+
+    print("after replaced - product: ",result_dict_product)
+
+    for key,value in result_dict_phone.items():
+        #print("key: ", key)
+        #print("value: ", value)
+        if (value==0.0):
+            result_dict_phone[key]=0.1
+
+    print("after replaced - phone: ",result_dict_phone)
+
+
+
+    division_dict ={}
+    for i,v in result_dict_phone.items():
+        for j,k in result_dict_product.items():
+            division_dict[i]={}
+            division_dict[i]=(v/k)
+    
+    print("Division DICT: ", division_dict) #'L-2: establish': 0.0,
+    #'L-2: establish': 0.0, 'R+1: as': 0.0, 'R_wind_+1: as': 0.0, 
+
+
+
+    log_dict ={}
+    for key,value in division_dict.items():
+        temp = math.log10(value)
+        log_dict[key]=abs(temp)
+
+    print("LOG DICT: ", log_dict)
+
+        
+# Now have to clean test data  - cleaned
+# if word (which is already split by word ) --> if word matches <head>line</head>
+# capture words before, after etc. 
+# if word appears in log dict --> keep track of each if statment --> get max 
+# whatever max is --> find if in the sense dict, it occurs more with phone or product
+
+
+
 
 
 
