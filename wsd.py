@@ -36,7 +36,7 @@ def main(argv):
     contentsTest=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>',"",contentsTest)
 
     contentsTrain=re.sub(r'[!#?,.:;]',"",contentsTrain) #did remove periods before but added space in 4.5 so it was 4 5
-    contentsTest=re.sub(r'[!#?,:.;]',"",contentsTest) #got rid of period, may affect decimals somwhats like the 4.5
+    contentsTest=re.sub(r'[!#?,.;]',"",contentsTest) #got rid of period, may affect decimals somwhats like the 4.5
 
     #period only
     #contentsTrain=re.sub(r'((\d+)[\.])(?!([\d]+))',"",contentsTrain)
@@ -56,16 +56,93 @@ def main(argv):
     contentsTest = re.sub( r"\<head\>lines\<\/head\>", "<head>line</head>",contentsTest)
 
     #print(contentsTrain)
-
+    print("contentsTest", contentsTest)
+    
     #need to make a list of sense with freq to help with log 
-    contentsTest = re.sub(r"<[/]?instance(.*)>\s", "", contentsTest)
+    #contentsTest = re.sub(r"<[/]?instance id=(.*)>\s", "", contentsTest)
+
+    # matchesIndicies =[]
+
 
     contentsTrainSplit=contentsTrain.splitlines() #whole file is split by \n, each \n is put in its own index
     contentsTestSplit = contentsTest.splitlines()
     #print("Contents Train",contentsTrainSplit)
-    # print("length train", len(contentsTrainSplit))
-    print("Contents Test", contentsTestSplit)
+    print("Contents Test SPlit", contentsTestSplit)
     # print("length test", len(contentsTestSplit))
+
+    listInstance=[]
+    for x in contentsTestSplit:
+        instanceId = re.findall('<instance id="([^"]*)"', x)
+        listInstance.append(instanceId)
+    
+    print("listy",listInstance)
+
+    #contentsTestSplit=re.sub(r"<[/]?instance(.*)>\s", "", contentsTestSplit)
+
+    # listInstance =[]
+    # instanceMatch = '<instance id="([^"]*)"'
+    # for i in contentsTestSplit:
+    #     i=re.sub(instanceMatch, "", i)
+        # matchFound = re.search(instanceMatch,i)
+        # if matchFound:
+        #     print("match found: ",matchFound)
+        #     i=re.sub(r"<[/]?instance(.*)>\s", "", matchFound)
+            # matchy = matchFound.group(1)
+            # listInstance.append(matchy)
+            # i = re.sub(matchFound, "")
+            # #matchFound.replace("")
+            #matchFound=re.sub('<instance id="([^"]*)"',"",matchFound)
+
+    #print("listInstance", listInstance)
+
+    instanceList =[]
+    instanceMatch = '<instance id="([^"]*)"'
+    #pat = re.compile(r'<instance id="([^"]*)"')
+    for i in contentsTestSplit:
+        matchy = re.match(instanceMatch,i)
+        if matchy:
+            instanceMatchy = matchy.group(0)
+            instanceList.append(instanceMatchy)
+            #i.replace(instanceMatch, "")
+            #i = pat.sub("",i)
+            #print("idk: ",matchy.group(0))
+    
+    print("instancee list: ",instanceList)
+
+   
+    for i,line in enumerate(contentsTestSplit):
+        if line.startswith("<instance id="):
+            #i.replace(i,"")
+            #alrightTest.append(i)
+            contentsTestSplit[i]=""
+
+    while("" in contentsTestSplit):
+        contentsTestSplit.remove("")
+            
+
+
+
+    print("after removal", contentsTestSplit)
+    
+
+
+
+
+
+    # patternI='<instance id="([^"]*)"'
+    # matchesIn =[]
+    # for k in contentsTestSplit:
+    #     matchI = re.search(patternI, k)
+    #     if matchI:
+    #         matchesIn.append(matchI)
+    
+    # print("matchesIn", matchesIn)
+        
+
+    
+   # print("matchfound", listInstance)
+    
+    #print("listInstance", listInstance)
 
     
 
@@ -98,7 +175,10 @@ def main(argv):
         finTrain.append(i)
     print("fin train", finTrain)
 
-    #finTest =[]
+
+
+
+    # finTest =[]
 
     # for i in contentsTestSplit[2::3]: #list slicing gets rid of the instance id and sense id, now we just have the text we need
     #     finTest.append(i)
@@ -503,28 +583,45 @@ def main(argv):
             left_word_test = "L-1: " + contentsTest[locateTest-1] 
             print("left test: ",left_word_test)
 
-
             # for keyL, valL in log_dict.items():
-            #     if keyL ==left_word_test:
+            #     if keyL == left_word_test:
             #         print("match key log: ", keyL)
             #         print("match val log: ", valL)
-            #         miniLogDict[keyL] = valL
-                    #maxVal = valL #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    #
+            #         maxLog=valL
+
+            for keyL, valL in log_dict.items():
+                if keyL ==left_word_test:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+        
+                    
         if (locateTest-2) >= 0:
             left_word_test_2 = "L-2: " + contentsTest[locateTest-2] 
             print("left test -2: ",left_word_test_2)
 
 
-            # for keyL, valL in log_dict.items():
-            #     if keyL ==left_word_test_2:
-            #         print("match key log: ", keyL)
-            #         print("match val log: ", valL)
-            #         miniLogDict[keyL] = valL
+            for keyL, valL in log_dict.items():
+                if keyL ==left_word_test_2:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
         if(locateTest+1) <len(contentsTest):
             right_word_test = "R+1: " + contentsTest[locateTest+1] 
             print("right test: ", right_word_test)
+
+            for keyL, valL in log_dict.items():
+                if keyL ==right_word_test:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
             
         #Yarowsky's Rule: Word found in -/+2 word window
@@ -540,9 +637,43 @@ def main(argv):
             print("test",left_word_wind_test_1)
             print("test",left_word_wind_test_2)
 
+            for keyL, valL in log_dict.items():
+                if keyL ==right_word_wind_1:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+                if keyL ==right_word_wind_2:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+                if keyL ==left_word_wind_1:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+                if keyL ==left_word_wind_2:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+
         if(locateTest-2) and (locateTest-1) <len(contentsTest):
             pair_left_test = "L-2-1: " + contentsTest[locateTest-2] + " " + contentsTest[locateTest-1]
             print("test",pair_left_test)
+
+            for keyL, valL in log_dict.items():
+                if keyL ==pair_left_test:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
             
         #Yarowsky's Rule: Pair of words at offset -1 and +1
@@ -550,11 +681,27 @@ def main(argv):
             pair_mid_test = "M-1+1: " + contentsTest[locateTest-1] + " " + contentsTest[locateTest+1]
             print("test",pair_mid_test)
 
+            for keyL, valL in log_dict.items():
+                if keyL ==pair_mid_test:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+
         
         #Yarowsky's Rule: Pair of words at offset +1 and +2
         if(locateTest+1) and (locateTest+2) <len(contentsTest):
             pair_right_test = "R+1+2: " + contentsTest[locateTest+1] + " " + contentsTest[locateTest+2]
             print("test",pair_right_test)
+
+            for keyL, valL in log_dict.items():
+                if keyL ==pair_right_test:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
 
         #RULE OF YOUR OWN
@@ -563,11 +710,27 @@ def main(argv):
             left_word_test_4 = "R-4: " + contentsTest[locateTest-4]
             print(left_word_test_4)
 
+            for keyL, valL in log_dict.items():
+                if keyL ==left_word_4:
+                    print("match key log: ", keyL)
+                    print("match val log: ", valL)
+                    miniLogDict[keyL] = valL
+                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+        
+        print("dict", miniLogDict)
+        #print("max val max key")
+        print("fin: ",max_value,max_keys)
+
 
         #the first test paragraph won't execute the statments going to the right of the line bc nothing is to the right, bc its the last word
 
         
         #print("mini: ",miniLogDict)
+
+        # a lot of log values are the same --> what do u do if it is?
+        # if there is a same log value --> random or find what occurs the most?
+        # need to capture instance number to print instance and sense id
         
 
 
