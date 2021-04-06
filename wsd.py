@@ -35,8 +35,8 @@ def main(argv):
     contentsTrain=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>',"",contentsTrain)
     contentsTest=re.sub(r'<s>|</s>|<@>|</@>|<p>|</p>',"",contentsTest)
 
-    contentsTrain=re.sub(r'[!#?,.:;]',"",contentsTrain) #did remove periods before but added space in 4.5 so it was 4 5
-    contentsTest=re.sub(r'[!#?,.;]',"",contentsTest) #got rid of period, may affect decimals somwhats like the 4.5
+    contentsTrain=re.sub(r'[!#?,.:;-]',"",contentsTrain) #did remove periods before but added space in 4.5 so it was 4 5
+    contentsTest=re.sub(r'[!#?,.:;-]',"",contentsTest) #got rid of period, may affect decimals somwhats like the 4.5
 
     #period only
     #contentsTrain=re.sub(r'((\d+)[\.])(?!([\d]+))',"",contentsTrain)
@@ -594,8 +594,8 @@ def main(argv):
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
         
                     
         if (locateTest-2) >= 0:
@@ -608,8 +608,8 @@ def main(argv):
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
         if(locateTest+1) <len(contentsTest):
             right_word_test = "R+1: " + contentsTest[locateTest+1] 
@@ -620,8 +620,8 @@ def main(argv):
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
             
         #Yarowsky's Rule: Word found in -/+2 word window
@@ -638,30 +638,36 @@ def main(argv):
             print("test",left_word_wind_test_2)
 
             for keyL, valL in log_dict.items():
-                if keyL ==right_word_wind_1:
+                if keyL ==right_word_wind_test_1:
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
-                if keyL ==right_word_wind_2:
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+
+            for keyL, valL in log_dict.items():
+                if keyL ==right_word_wind_test_2:
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
-                if keyL ==left_word_wind_1:
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+
+            for keyL, valL in log_dict.items():
+                if keyL ==left_word_wind_test_1:
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
-                if keyL ==left_word_wind_2:
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+
+            for keyL, valL in log_dict.items():
+                if keyL ==left_word_wind_test_2:
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
         if(locateTest-2) and (locateTest-1) <len(contentsTest):
             pair_left_test = "L-2-1: " + contentsTest[locateTest-2] + " " + contentsTest[locateTest-1]
@@ -672,8 +678,8 @@ def main(argv):
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
             
         #Yarowsky's Rule: Pair of words at offset -1 and +1
@@ -686,8 +692,8 @@ def main(argv):
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
         
         #Yarowsky's Rule: Pair of words at offset +1 and +2
@@ -700,8 +706,8 @@ def main(argv):
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
 
 
         #RULE OF YOUR OWN
@@ -711,16 +717,73 @@ def main(argv):
             print(left_word_test_4)
 
             for keyL, valL in log_dict.items():
-                if keyL ==left_word_4:
+                if keyL ==left_word_test_4:
                     print("match key log: ", keyL)
                     print("match val log: ", valL)
                     miniLogDict[keyL] = valL
-                    max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
-                    max_keys = [k for k, v in miniLogDict.items() if v == max_value]
-        
-        print("dict", miniLogDict)
-        #print("max val max key")
-        print("fin: ",max_value,max_keys)
+            #         max_value = max(miniLogDict.values()) #even if u find maxVal --> you have to know which word in occurs with so you can go to you sense dict so put it in a new mini dict
+            #         max_keys = [k for k, v in miniLogDict.items() if v == max_value]
+
+
+        # for keyMini, valMini in miniLogDict.items():
+        #     max_value = max(miniLogDict.values())
+        #     max_keys =[k for k, v in miniLogDict.items() if v == max_value]
+
+        max_value = max(miniLogDict.values())
+        max_keys =[k for k, v in miniLogDict.items() if v == max_value]
+        print("final max: ",max_value,max_keys)
+        print("max key b4 strip: ", max_keys) #looks like: ['L-2-1: over telephone']
+        #max_keysfin = max_keys.strip([])
+        #max_keyStrip = [i.strip().split('[]') for i in max_keys]
+        #max_keyStrip = max_keys.substring(1,max_keys.length()-1)
+        # result = str(max_keys).replace("['']", "")
+        # print("max key after strip: ", result) 
+
+        for i in max_keys:
+            print("this is max key: ", i)
+
+        # for keyMax, valMax in d.items():
+        #     print("sense dict key: ", keyMax) #looks like: L-2-1: over telephone --> need to remove brakcets and quotes
+        res={}
+        for keyMax, valMax in d.items():
+            for i in max_keys:
+                if keyMax == i:
+                    print("this is the fucking match", keyMax)
+                    print("match fucking",valMax) #now i have to return whatever has the largest value --> product or phone
+                    max_val =0
+                    
+                    # for ele in valMax.values():
+                    #     if ele > max_val:
+                    #         max_val = ele
+                    # print("MAX PHONE OR PRODUCT: ",max_val) #gets you max num of phone or procut
+                    # res[keyMax] = max_val
+
+                    for k2,v2 in valMax.items():
+                        if v2>max_val:
+                            max_val =v2
+                            finalSense = k2
+                    
+                    print("MAX PHONE OR PRODUCT: ",finalSense,max_val)
+        #print("hopefully", str(res))
+
+
+
+
+        # for keyMax, valMax in d.items():
+        #     max_value = max(miniLogDict.values())
+        #     max_keys =[k for k, v in miniLogDict.items() if v == max_value]
+        #     if max_keys==keyMax:
+        #         print("SENSE MATCH: ",max_keys, keyMax)
+
+
+
+
+
+
+        #now we have the highest max and value --> search for it in sense dict
+        #whatever it occurs with more (product or phone) #append to print sentance with instance id
+        #if max value is the same --> choose a random one and search for it in the sense dict
+        #whatever it occurs with more (product or phone) append to print sentance with instance
 
 
         #the first test paragraph won't execute the statments going to the right of the line bc nothing is to the right, bc its the last word
@@ -751,6 +814,9 @@ def main(argv):
 # capture words before, after etc. 
 # if word appears in log dict --> keep track of each if statment --> get max 
 # whatever max is --> find if in the sense dict, it occurs more with phone or product
+
+#matching works --> now have to figure out how to get the max log value per each sentance
+# --> search for it in sense dict --> see if it occurs more with phone or product
 
 
 
