@@ -10,6 +10,7 @@ import itertools
 from collections import Counter
 import string
 import math
+import random
 
 
 def main(argv):
@@ -739,6 +740,13 @@ def main(argv):
         # result = str(max_keys).replace("['']", "")
         # print("max key after strip: ", result) 
 
+        #max_key returns the highest value and puts it in a list
+        #if there are multiple max keys (because there may be the same log)
+        #chooses a max_key at random and then evalutes if it had the highest phone or productx 
+        if len(max_keys)>1:
+            max_keys =random.sample(max_keys,1)
+
+
         for i in max_keys:
             print("this is max key: ", i)
 
@@ -795,16 +803,6 @@ def main(argv):
         # if there is a same log value --> random or find what occurs the most?
         # need to capture instance number to print instance and sense id
         
-
-
-            
-
-
-            
-
-        
-    
-
 
 
 

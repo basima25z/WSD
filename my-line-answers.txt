@@ -3737,23 +3737,7 @@ match key log:  R-4: caller
 match val log:  1.250420002308894
 final max:  1.250420002308894 ['L-1: a', 'R_wind_+1: open', 'L_wind_-1: a', 'M-1+1: a open', 'R-4: caller']
 max key b4 strip:  ['L-1: a', 'R_wind_+1: open', 'L_wind_-1: a', 'M-1+1: a open', 'R-4: caller']
-this is max key:  L-1: a
-this is max key:  R_wind_+1: open
-this is max key:  L_wind_-1: a
-this is max key:  M-1+1: a open
 this is max key:  R-4: caller
-this is the fucking match L-1: a
-match fucking {'product': 21, 'phone': 1}
-MAX PHONE OR PRODUCT:  product 21
-this is the fucking match L_wind_-1: a
-match fucking {'product': 21, 'phone': 1}
-MAX PHONE OR PRODUCT:  product 21
 this is the fucking match R-4: caller
-match fucking {'product': 0, 'phone': 1}
-MAX PHONE OR PRODUCT:  phone 1
-this is the fucking match R_wind_+1: open
-match fucking {'product': 0, 'phone': 1}
-MAX PHONE OR PRODUCT:  phone 1
-this is the fucking match M-1+1: a open
 match fucking {'product': 0, 'phone': 1}
 MAX PHONE OR PRODUCT:  phone 1
