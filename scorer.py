@@ -13,7 +13,7 @@ so that the output knows where to be printed - along with the confusion matrix b
 will pop up when the command is ran 
 - To run this program, type in the command line:python3 scorer.py my-line-answers.txt line-key.txt > report.txt
 - It is not necceasry to add the 3.8 after python unless you're IDE defaults to the python 2.7 interpretor
-- Note: in order to close out of this program, you must exit the pop up python box which displays the confusion matrix
+- Note: in order to close out of this program and to write to STDOUT, you must exit the pop up python box which displays the confusion matrix
 '''
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
@@ -78,10 +78,10 @@ def main(argv):
 
 
     for index in contentsKeyWordSplit:
-        match = re.search(pattern, index)
-        if match:
-            sense=match.group(1)
-            senseKey.append(sense)
+        matchKey = re.search(pattern, index)
+        if matchKey:
+            senseK=matchKey.group(1)
+            senseKey.append(senseK)
 
 
     '''
@@ -94,11 +94,13 @@ def main(argv):
     '''
 
     '''
-    #In the end, the accuracy achieved was 50%, the True Positives was 40, True Negatives was 23, False Negatives was 32, and the False Positive was 31
+    #In the end, the highest accuracy achieved was 59%, the True Positives was 52, True Negatives was 23, False Negatives was 20, and the False Positive was 31
     #I believe a better accuracy would have been achieved if I built upon Yarowsky's features, I implemented all of his, and added a new one, but if I had implemented more
     and took into consideration other methods instead of log likelyhood, such as considering mean, I believe I could have achieved a better result as sometimes the max log likely hood
     of multiple if statements would be the same due to them having a similar sense dict for example: telephone-1{product:2, phone:2} and call+1{product:2, phone:2} --> these would have the same log likely hood
     #If there were multiple max log likely hood, a random word was chosen, instead of utilzing this method I could have went a step further and chosen the word that appeared closest to <line>head<line>
+    #Due to the picking of a random word (if there were multiple of the same max log likelyhood), the accuracy fulctuates, so everytime you run wsd.py, the senses will change due 
+    to the random picking, but even with the random picking, it has never gone below 49%
     '''
 
     acc = accuracy_score(senseKey, senseTest)
