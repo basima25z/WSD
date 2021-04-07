@@ -772,8 +772,8 @@ def main(argv):
                             #count =0
                             max_val =v2
                             finalSense = k2
-                            print("senseid=", finalSense)
-                            print(listInstanceFil[count])
+                            #print("senseid=", finalSense)
+                            #print(listInstanceFil[count])
                             #ans = listInstance[count]
                             finAns = str(listInstanceFil[count])[2:-2]
 
@@ -781,9 +781,9 @@ def main(argv):
 
                             #can only use , not + when using listInstanceFil
                             #print('<answer instance="',finAns,'" sensedid="',finalSense,'"/>')
-                            print('<answer instance="'+finAns+'" sensedid="'+finalSense+'"/>')
+                            print('<answer instance="'+finAns+'" senseid="'+finalSense+'"/>')
                             count = count+1
-                            print("count print",count)
+                            #print("count print",count)
 
                             
                             
