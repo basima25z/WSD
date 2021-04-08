@@ -1,6 +1,6 @@
-Accuracy:  53.17460317460318
+Accuracy:  48.41269841269841
 
 Predicted  phone  product
 Actual                   
-phone         43       29
-product       30       24
+phone         42       30
+product       35       19

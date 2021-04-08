@@ -101,6 +101,8 @@ def main(argv):
     #If there were multiple max log likely hood, a random word was chosen, instead of utilzing this method I could have went a step further and chosen the word that appeared closest to <line>head<line>
     #Due to the picking of a random word (if there were multiple of the same max log likelyhood), the accuracy fulctuates, so everytime you run wsd.py, the senses will change due 
     to the random picking, but even with the random picking, it has never gone below 49%
+    #Another method that could have aided in a better accuracy is that not to replace <head>lines</head>, although there is only a one letter difference, the word lines could have
+    # helped disambiguate phone and product 
     '''
 
     acc = accuracy_score(senseKey, senseTest)
