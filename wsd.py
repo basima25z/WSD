@@ -10,7 +10,6 @@
 #The output utilies STDOUT, so in the command line, following the two files, use '>' along with the filename.txt that you would like to output to
 #To run this program in the terminal the commands are: python3 wsd.py line-train.txt line-test.txt my-model.txt > my-line-answers.txt
 #It is not necceasry to add the 3.8 after python unless you're IDE defaults to the python 2.7 interpretor 
-#Note: I did not write to my-model.txt as I utilized output to the terminal to debug instead 
 '''
 
 import os
@@ -325,6 +324,10 @@ def main(argv):
                     d[left_word_4]["product"]+=1
 
 
+    #Printing sense dict to my-model.txt for debugging
+    with open(argv[3], "w") as f:
+        f.write("Sense Dict")
+        print(d,file=f)
 
     
     #The two dictionaries below are used to classify the numerator and denominator for the log likelyhood (prior to dividing them and applying log)
@@ -362,6 +365,11 @@ def main(argv):
     for key,value in division_dict.items():
         temp = math.log10(value)
         log_dict[key]=abs(temp)
+
+    #Printing log dict to my-model.txt for debugging
+    with open(model, "a") as f:
+        f.write("Log Dict")
+        print(log_dict,file=f)
 
 
 ###############TESTING##############################
@@ -487,6 +495,8 @@ def main(argv):
 
         max_value = max(miniLogDict.values())
         max_keys =[k for k, v in miniLogDict.items() if v == max_value]
+
+    
 
         
 
