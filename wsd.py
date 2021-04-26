@@ -37,9 +37,9 @@ import random
 '''
 
 def main(argv):
-    trainFile = os.path.basename(sys.argv[1])
-    testingFile = os.path.basename(sys.argv[2])
-    model = os.path.basename(sys.argv[3])
+    trainFile = str(sys.argv[1])
+    testingFile = str(sys.argv[2])
+    model = str(sys.argv[3])
 
     openTrainFile = open(trainFile, "r")
     contentsTrain = openTrainFile.read().lower()
@@ -511,7 +511,7 @@ def main(argv):
         # the nested dictionary values: {telephonek_1{product:5,phone:2}}
         #It finds the highest value inside the inner dict and sets it to max_val
 
-        for keyMax, valMax in d.items():
+        for keyMax, valMax in d.items(): #
             for i in max_keys:
                 if keyMax == i:
                     max_val =0
